@@ -1,0 +1,279 @@
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+ul{
+    list-style: none;
+}
+ul li a{
+    text-decoration: none;
+}
+  
+.video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+  
+#video-background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+  
+.nav_content{
+    transform: translate(0,0);
+    color: rgba(255, 255, 255, 0.853);
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.display_flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.flex_wrap{
+    flex-wrap: wrap;
+}
+.upper_nav{
+    width: 100vw;
+    height: 14vh;
+    background-color: rgba(255, 255, 255,0); 
+}
+.pages{
+    margin-right: 2%;
+}
+.pages ul li{
+    padding: 0% 1%;
+    font-weight: bold;
+    margin-top: -.5%;
+}
+.nav_content .logo img{
+    width: 50%;
+}
+.nav_content .logo{
+    margin-left: 2%;
+}
+.nav_content .pages li a,.pages li span,.pages li{
+    font-family: 'Robot Slab';
+    font-size: 100%;
+    font-weight:bold;
+    background: linear-gradient(to right, #0074D9, #2ECC40);
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 3%; 
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.25);
+}
+.nav_content .pages li a:hover,.pages li span:hover,.pages li:hover{
+    background: linear-gradient(to right,#2ECC40, #0074D9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+
+/* ---------------------------------------------------------------------front----------------------------------------------------------------------- */
+.front h2{
+    color: rgba(255, 255, 255, 0.8);
+    font-family: "Bodoni Moda";
+    font-weight: bold;
+    line-height: 1.2em;
+    text-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+    padding: 6% 0 0% 0%;
+    text-align: center;
+    margin-bottom: 2%;
+    margin-top: 1%;
+}
+
+.front h2 div{
+    font-size:1.2em ;
+}
+.search{
+    background-color: rgba(255, 255, 255,0);
+    margin: 2% 15%;
+    border-radius: 12px;
+    text-align: center;
+    padding: 1% 0 2% 0;
+}
+.search ul li{
+    padding: 1% 0% 2% 0%;
+}
+.search li a{
+    font-family: sans-serif;
+    font-weight:bold;
+    color: #f0f4f6;
+    letter-spacing: 3%;
+    font-size: 113%;
+}
+.search .searchbar{
+    justify-content: center;
+    padding: 1% 0% 1% 0%;
+    margin: 0% 15% .5% 15%;
+    background-color: white;
+    border-radius: 45px;
+}
+.search input{
+    padding: 13px 20px 13px 5px;
+    font-size: 125%;
+    color: #333;
+    width: 40vw;
+    height: 2vh;
+    border: none;
+}
+.searchbar button{
+    color: white;
+    background-color: #2ECC40;
+    border: none;
+    cursor: pointer;
+    font-size: 125%;
+    width: 7vw;
+    padding: 1.5% 1%;
+    border-radius:45px;
+}
+.search ul li a {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    padding: .4em .5em;
+    border-bottom: solid rgba(255, 255, 255, 0);
+    border-radius:45px;
+  }
+  
+
+  .front .search .types{
+    margin: 0 7%;
+  }
+  .search ul li a:hover::before {
+    width: 100%;
+  }
+  .search ul li a:hover{
+    border-bottom: solid rgb(48, 237, 14);
+    color: #02223c;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius:45px;
+  }
+  .search input:focus{
+    border: none;
+    outline: none;
+  }
+
+
+
+
+
+
+/* -----------------------------------------------------------media query------------------------------------------------------- */
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+      .pages{
+        width: 72%;
+    }
+      .search .searchbar{
+        flex-direction: column;
+        margin: 0;
+        padding: 1% 6%;
+        border-radius: 12px;
+      }
+      .searchbar input{
+        width: 100%;
+        font-size: 100%;
+      }
+      .searchbar button{
+        width: 50%;
+        font-size: 100%;
+      }
+      .search li a{
+        font-size:1%;
+    }
+    .nav_content .pages li a, .pages li span, .pages li {
+        font-size: 78%;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 601px) {
+    .pages{
+        width: 72%;
+    }
+    .front h2{
+        font-size: 2em;
+    }
+    .search li a{
+        font-size:58%;
+    }
+    .nav_content .pages li a, .pages li span, .pages li {
+        font-size: 114%;
+    }
+    .search input,.searchbar button {
+        font-size: 70%;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .pages{
+        width: 54%;
+    }
+    .front h2{
+        font-size: 3em;
+    }
+    .search li a{
+        font-size: 74%;
+    }
+    .search input,.searchbar button {
+        font-size: 78%;
+    }
+    .nav_content .pages li a, .pages li span, .pages li {
+        font-size: 112%;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .pages{
+        width: 58%;
+    }
+    .front h2{
+        font-size: 4em;
+    }
+    .search li a{
+        font-size: 96%;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .pages{
+        width: 48%;
+    }
+    .front h2{
+        font-size: 4em;
+    }
+    
+}
